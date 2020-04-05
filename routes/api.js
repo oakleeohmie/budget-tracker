@@ -21,9 +21,7 @@ router.post("/api/transaction/bulk", ({ body }, res) => {
     });
 });
 
-router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
+
 
 router.get("/api/transaction", (req, res) => {
   Transaction.find({}).sort({ date: -1 })
